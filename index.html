@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html  ng-app="app">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+         <meta name="apple-mobile-web-app-capable" content="yes">
+         <meta name="apple-mobile-web-app-status-bar-style" content="black">
+         <meta content="telephone=no" name="format-detection">
+         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		 <link rel="stylesheet" href="css/amazeui.css" />
+		 <script type="text/javascript" src="js/jquery.min.js" ></script>
+		 <!--<script type="text/javascript" src="js/angular.min.js" ></script>-->
+		 <!--<script type="text/javascript" src="js/angular-route.js" ></script>-->
+         <script type="text/javascript" src="js/amazeui.js" ></script>
+         <link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body ng-model="ctrl">
+		<div id="index">
+		  <!--头部-->
+    <div class="index_head">
+		<div class="logo">
+			<a href="#"><img src="images/logo.png"></a>
+		</div>
+		<!--搜索-->
+		<div class="search"> 
+			<select>
+				<option value="option1">特产</option>
+				<option value="option2">景点</option>
+			</select>
+			<i class="am-icon-caret-down"></i>
+			<input class="text" type="search" placeholder="要买什么？" />
+			<input class="submit " type="submit" value=" " />
+			<i class="am-icon-search"></i>
+			<div class="clear"></div>
+		</div>
+		<a class="phone">
+			<img src="images/phone.png">
+		</a>
+   </div>
+   <!--banner-->
+     <div id="index_banner">
+        <div class="am-slider am-slider-default">
+            <ul class="am-slides">
+                <li><a title="" href="activity.html"><img src="images/banner2.jpg"/></a></li>
+                <li><a title="" href="activity.html"><img src="images/banner4.jpg"/></a></li>
+                <li><a title="" href="activity.html"><img src="images/banner3.jpg"/></a></li>
+                <li><a title="" href="activity.html"><img src="images/banner.jpg"/></a></li>
+            </ul>
+        </div>
+    </div>
+         <!--图标-->
+          <div class="order_nav">
+        <ul class="box_nav am-avg-sm-4">
+            <li>
+                <a title="" href="trip.html">
+                    <img src="images/index_icon01.png"/>
+                    <p>孟津旅游</p>
+                </a>
+            </li>
+            <li>
+                <a title="" href="specialty.html">
+                    <img src="images/index_icon02.png"/>
+                    <p>特产商城</p>
+                </a>
+            </li>
+            <li>
+                <a title="" href="beautiful.html">
+                    <img src="images/index_icon03.png"/>
+                    <p>美丽乡村</p>
+                </a>
+            </li>
+            <li>
+                <a title="" href="news.html">
+                    <img src="images/index_icon04.png"/>
+                    <p>新闻资讯</p>
+                </a>
+            </li>
+            <div class="clear"></div>
+        </ul>
+    </div>
+		 </div>
+<div id="footer">
+    <div class="first">
+        <ul class="am-avg-sm-2">
+            <li class="active">
+                <a title=""  href="index.html">
+                    <img src="images/icon-footer01-a.png"/>
+                    <p>首页</p>
+                </a>
+            </li>
+            <li>
+                <a title="" href="trip.html">
+                    <img alt="" src="images/icon-footer2-a.png"/>
+                    <p>孟津旅游</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="beautiful">
+        <a title=""  href="beautiful.html">
+            <img alt="" src="images/icon-footer3-a.png"/>
+        </a>
+    </div>
+    <div class="last">
+        <ul class="am-avg-sm-2">
+            <li >
+                <a title="" href="specialty.html">
+                    <img alt="" src="images/icon-footer4-a.png"/>
+                    <p>特产商城</p>
+                </a>
+            </li>
+            <li>
+                <a title="" href="myself.html">
+                    <img alt="" src="images/icon-footer5-a.png"/>
+                    <p>我的</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    <!--路由切换-->
+    <!--<div id="max" ng-view=""></div>
+		<div id="footer">
+			<ul>
+				<li>
+					<a href="#/index">首页</a>
+				  <img alt="" src="images/icon-footer01-a.png"/>
+				</li>	
+				<li>
+					<a href="#/trip">
+						<img alt="" src="images/icon-footer02-a.png"/>
+						孟津旅游</a></li>
+				<li>
+					<a href="#/beautiful"></a>
+					<img alt="" src="images/icon-footer3-a.png"/>
+				</li>
+				<li>
+					<a href="#/specialty">特产长城</a>
+					<img alt="" src="images/icon-footer04-a.png"/>
+				</li>
+				<li>
+					<a href="#/myself">我的</a>
+					<img alt"" src="images/icon-footer05-a.png"/>
+				</li>
+			</ul>
+		</div>-->
+	</body>
+	<script>
+//  angular.module("app",["ngRoute"])
+//		.config(["$routeProvider",function($routeProvider){
+//			$routeProvider
+//			.when("/index",{templateUrl:"index.html"})
+//			.when("/trip",{templateUrl:"trip.html"})
+//			.when("/beautiful",{templateUrl:"beautiful.html"})
+//			.when("/specialty",{templateUrl:"specialty.html"})
+//			.when("/myself",{templateUrl:"myself.html"})
+//			.otherwise({redirectTo:"/index"})
+//		}]);
+    $(function () {
+        $('.am-slider').flexslider({
+            controlNav: true,               // Boolean: 是否创建控制点
+            directionNav: false,             // Boolean: 是否创建上/下一个按钮（previous/next）
+            touch: true,                    // Boolean: 允许触摸屏触摸滑动滑块
+        });
+    });
+    
+	</script>
+</html>
